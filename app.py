@@ -37,7 +37,7 @@ sess = tf.Session()
 
 # Load in pretrained model
 saver = tf.train.Saver()
-saver.restore(sess, tf.train.latest_checkpoint('models'))
+saver.restore(sess, tf.train.latest_checkpoint('models/'))
 zeroVector = np.zeros((1), dtype='int32')
 
 def pred(inputString):
