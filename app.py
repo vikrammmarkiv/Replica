@@ -15,7 +15,7 @@ vocabSize = len(wordList)
 batchSize = 24
 maxEncoderLength = 15
 maxDecoderLength = 15
-lstmUnits = 48
+lstmUnits = 112
 numLayersLSTM = 3
 
 # Create placeholders
@@ -37,7 +37,7 @@ sess = tf.Session()
 
 # Load in pretrained model
 saver = tf.train.Saver()
-saver.restore(sess, tf.train.latest_checkpoint('models'))
+saver.restore(sess, tf.train.latest_checkpoint('models/'))
 zeroVector = np.zeros((1), dtype='int32')
 
 def pred(inputString):
